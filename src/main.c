@@ -354,6 +354,9 @@ void editorRowInsertChar(erow *row, int at, int c) {
 }
 
 void editorRowAppendString(erow *row, char *string, size_t len) {
+  if(len == 0 || string == NULL) {
+    return;
+  }
   row->chars = realloc(row->chars, row->size + len + 1);
   memcpy(&row->chars[row->size], string, len);
   row->size += len;
@@ -382,13 +385,14 @@ void editorDelChar() {
   }
 
   erow *row = &E.row[E.cy];
+
   if(E.cx > 0) {
     editorRowDelChar(row, E.cx - 1);
     E.cx--;
-  } else {
+  } else if(E.cy > 0) {
     E.cx = E.row[E.cy - 1].size;
     editorRowAppendString(&E.row[E.cy - 1], row->chars, row->size);
-    editorDelChar(E.cy);
+    editorDelRow(E.cy);
     E.cy--;
   }
 }
@@ -869,6 +873,8 @@ void initEditor() {
 }
 
 int main(int argc, char *argv[]) {
+  freopen("/tmp/conchpad_log.txt", "w", stderr);
+
   write(STDOUT_FILENO, "\x1b[2J", 4);
 
   enableRawMode();
