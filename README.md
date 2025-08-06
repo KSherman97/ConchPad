@@ -15,7 +15,7 @@ https://github.com/KSherman97/ConchShell
 + del (and fn+backspace)    
   
 [X] View Text Files  
-[] Edit Text Files  
+[X] Edit Text Files  
 [] Search files  
 [] syntax highlighting  
 [] appendices  
