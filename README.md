@@ -9,15 +9,15 @@ See ConchShell here:
 https://github.com/KSherman97/ConchShell
 
 ## Roadmap
-- [X] basic editor movement
-* up, down, left, right
-* home, end, page up, page down
-* del (and fn+backspace)    
+[X] basic editor movement
++ up, down, left, right
++ home, end, page up, page down
++ del (and fn+backspace)    
   
-- [IN PROGRESS] View Text Files  
-- [] Edit Text Files  
-- [] Search files  
-- [] syntax highlighting  
-- [] appendices  
+[IN PROGRESS] View Text Files  
+[] Edit Text Files  
+[] Search files  
+[] syntax highlighting  
+[] appendices  
 
 more to come
