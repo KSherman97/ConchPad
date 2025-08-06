@@ -14,7 +14,7 @@ https://github.com/KSherman97/ConchShell
 + home, end, page up, page down
 + del (and fn+backspace)    
   
-[IN PROGRESS] View Text Files  
+[X] View Text Files  
 [] Edit Text Files  
 [] Search files  
 [] syntax highlighting  
